@@ -15,7 +15,13 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
+temp = X*theta;
 
+pos = find(temp>=0);
+neg = find(temp<0);
+
+p(pos) = 1;
+p(neg) = 0;
 
 
 
